@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>You better say Yes</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="title-wrap">
+        <span class="heart-top">💘</span>
+        <h2 class="pretitle">Will You Be My</h2>
+        <h1 class="title">Valentine?</h1>
+        <p class="subtitle">
+          Choose wisely... though there's really only one right answer 😉
+        </p>
+      </div>
+      <button id="yesBtn">Yes 💖</button>
+      <button id="noBtn">No 😢</button>
+      <p class="no-hint">Psst... the No button is a little shy 🙈</p>
+
+      <div id="message" class="hidden">
+        <p>Yay! I’m so happy 🥰</p>
+      </div>
+
+      <div id="sadMessage" class="hidden">
+        <p>It’s okay — you're still amazing 😊</p>
+      </div>
+
+      <div id="taunt" class="taunt hidden"></div>
+    </div>
+    <div id="successOverlay" class="success-overlay hidden">
+      <div class="success-card">
+        <h2>It's a yes! 🥰</h2>
+        <p>I'm so happy — happy Valentine's Day!</p>
+        <button id="closeSuccess">Close</button>
+      </div>
+    </div>
+    <!-- Contact modal for sending email -->
+    <div id="contactModal" class="contact-modal hidden">
+      <form id="contactForm" class="contact-form">
+        <h3>One last thing — leave a message</h3>
+        <label for="senderEmail">Your email (optional)</label>
+        <input
+          id="senderEmail"
+          name="sender_email"
+          type="email"
+          placeholder="you@example.com"
+        />
+
+        <label
+          ><input id="anonymous" name="anonymous" type="checkbox" /> Send
+          anonymously</label
+        >
+
+        <label for="anonMessage">Message</label>
+        <textarea
+          id="anonMessage"
+          name="message"
+          rows="4"
+          placeholder="Write an anonymous note..."
+        ></textarea>
+
+        <div class="contact-actions">
+          <button type="submit" id="sendContact">Send</button>
+          <button type="button" id="cancelContact">Cancel</button>
+        </div>
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
