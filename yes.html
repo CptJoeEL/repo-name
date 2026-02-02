@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>It's a yes! 🥰</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        overflow: hidden;
+      }
+      .yes-center {
+        position: relative;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+      }
+      .yes-title {
+        font-family: Montserrat, system-ui, sans-serif;
+        font-size: clamp(28px, 6vw, 48px);
+        color: #ff4aa7;
+        text-shadow: 0 6px 24px rgba(255, 82, 168, 0.12);
+      }
+      .big-blush {
+        font-size: 120px;
+        transform-origin: center;
+        filter: drop-shadow(0 6px 18px rgba(0, 0, 0, 0.16));
+      }
+      .blush-pulse {
+        animation: pulse 1400ms infinite ease-in-out;
+      }
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.08);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+      .floating-emoji {
+        position: fixed;
+        pointer-events: none;
+        will-change: transform, opacity;
+      }
+      .back-link {
+        position: fixed;
+        left: 16px;
+        top: 16px;
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 999px;
+        padding: 8px 12px;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+      }
+    </style>
+  </head>
+  <body>
+    <a class="back-link" href="index.html">← Home</a>
+    <div class="yes-center">
+      <h1 class="yes-title">I knew you wanted me 💕</h1>
+      <div class="big-blush blushing">😊</div>
+    </div>
+
+    <script src="yes.js"></script>
+  </body>
+</html>

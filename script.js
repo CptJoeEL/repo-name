@@ -14,20 +14,8 @@ const cancelContact = document.getElementById('cancelContact');
 
 yesBtn.addEventListener('click', (e) => {
   e.preventDefault();
-  // Hide the contact modal and clear any inputs
-  if (contactModal) contactModal.classList.add('hidden');
-  if (senderEmailInput) senderEmailInput.value = '';
-  if (anonMessageInput) anonMessageInput.value = '';
-  if (anonymousCheckbox) anonymousCheckbox.checked = false;
-
-  // Hide sad message if visible
-  if (sadMessage) sadMessage.classList.add('hidden');
-
-  // Show the custom confirmation message
-  if (message) {
-    message.innerHTML = '<p>I knew you wanted me 💕</p>';
-    message.classList.remove('hidden');
-  }
+  // Navigate to the dedicated yes page which shows the message and animations
+  window.location.href = 'yes.html';
 });
 
 if (cancelContact) cancelContact.addEventListener('click', () => {
