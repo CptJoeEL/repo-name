@@ -1,0 +1,14 @@
+const yesBtn = document.getElementById('yesBtn');
+const noBtn = document.getElementById('noBtn');
+const message = document.getElementById('message');
+const sadMessage = document.getElementById('sadMessage');
+
+yesBtn.addEventListener('click', () => {
+  message.classList.remove('hidden');
+  sadMessage.classList.add('hidden');
+});
+
+noBtn.addEventListener('click', () => {
+  sadMessage.classList.remove('hidden');
+  message.classList.add('hidden');
+});
